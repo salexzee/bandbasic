@@ -1,0 +1,68 @@
+{% render 'hero' with {
+  settings: section.settings,
+  id: section.id
+} %}
+
+{% schema %}
+  {
+    "name": "Hero",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "New Heading"
+      },
+      {
+        "type": "textarea",
+        "id": "copy",
+        "label": "Body Copy",
+        "default": "I'm baby raclette keffiyeh blog tacos, plaid hexagon distillery mumblecore gastropub cronut aesthetic williamsburg. Hammock bicycle rights chillwave occupy salvia."
+      },
+      {
+        "type": "url",
+        "id": "link_url",
+        "label": "Link URL"
+      },
+      {
+        "type": "text",
+        "id": "link_text",
+        "label": "Link Text",
+        "default": "Shop Now"
+      },
+      {
+        "type": "image_picker",
+        "id": "small_image",
+        "label": "Small Image",
+        "info": "Dimensions: 991x991"
+      },
+      {
+        "type": "image_picker",
+        "id": "large_image",
+        "label": "Large Image"
+      },
+      {
+        "type": "select",
+        "label": "Alignment",
+        "id": "alignment",
+        "default": "left",
+        "options": [
+          {
+            "label": "Left",
+            "value": "left"
+          },
+          {
+            "label": "Center",
+            "value": "center"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero",
+        "category": "Image w/ text"
+      }
+    ]
+  }
+{% endschema %}
