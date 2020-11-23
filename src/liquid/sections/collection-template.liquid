@@ -17,7 +17,7 @@
       </header>
     {% endif %}
 
-    {% paginate collection.products by 2 %}
+    {% paginate collection.products by 12 %}
       <div class="collection__grid">
         {% for product in collection.products %}
           {% render 'product-tile' with {
@@ -31,7 +31,7 @@
           {% if part.is_link %}
             {{ part.title | link_to: part.url }}
           {% else %}
-            <span>{{ part.title }}</span>
+            <span class="{% if paginate.current_page == part.title %}active{% endif %}">{{ part.title }}</span>
           {% endif %}
         {% endfor %}
       </div>

@@ -1,0 +1,29 @@
+.header {
+  background-color: white;
+  box-shadow: 1px 0 5px rgba($color-black, 0.2);
+  left: 0;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.header__wrapper {
+  align-items: center;
+  display: flex;
+  height: 65px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.header__logo-wrapper {
+  display: inline-block;
+  width: 200px;
+}
+
+.header__logo {
+  max-width: 100%;
+}
