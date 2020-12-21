@@ -902,6 +902,11 @@
   resolved "https://registry.yarnpkg.com/@rollup/stream/-/stream-1.1.0.tgz#9e57fab95421c64346f0d813efa66f2e5a36a9fb"
   integrity sha512-agGnt8GhRPo3C5RIJIA7cI7DW3vGj1k4xKCxx2qQgYk1pE4mzupPhsbDHD1waVNc4U6cav7EzQ55MN5OS3zBWg==
 
+"@shopify/theme-cart@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@shopify/theme-cart/-/theme-cart-4.0.2.tgz#da1eb9e5ecd550be24cf3fdda7659134c0a036ad"
+  integrity sha512-fmgjNKIQVlRe2G5Gm8T/ZPk5iKxbVmDWNibybaJBekf9nt6Csbkk9M4wOaKN+14Cj7JwHMnYEKmsQBMCg23PWw==
+
 "@shopify/themekit@^1.1.6":
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/@shopify/themekit/-/themekit-1.1.6.tgz#7c9438b49a394633a1268213b782515bfc077dab"
