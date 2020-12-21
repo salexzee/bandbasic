@@ -14,6 +14,19 @@
         PRODUCT FORM
       {% endcomment %}
 
+      {% form 'product', product %}
+        <div>
+          <label for="product-form-size">Size</label>
+          <select id="product-form-size" name="id">
+            {% for variant in product.variants %}
+              <option value="{{ variant.id }}">{{ variant.title }}</option>
+            {% endfor %}
+          </select>
+        </div>
+
+        <button type="submit">Add To Cart</button>
+      {% endform %}
+
     </div>
   </section>
 </div>
