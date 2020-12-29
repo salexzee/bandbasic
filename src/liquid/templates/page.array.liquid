@@ -1,0 +1,60 @@
+{% assign product = all_products['heather-gf-material-crop-sweatshirt'] %}
+
+<div class="arrays">
+  <h1>{{ page.title }}</h1>
+
+  <div class="arrays__block">
+    {% for variant in product.variants %}
+      <h2>{{ variant.title }}</h2>
+    {% endfor %}
+
+    {% assign variants = product.variants %}
+  </div>
+
+  <div class="arrays__block">
+    {% assign names = 'sam,mike,chris' | split: ',' %}
+
+    {% for name in names %}
+      <h2>{{ name }}</h2>
+    {% endfor %}
+  </div>
+
+  <div class="arrays__block">
+    {% assign locations = 'San Diego|5th Ave,New York|Wall St.,Washington D.C.|10th,Miami|Collins Ave,Paris|Rue Denoyez' | split: ',' %}
+
+    {% for location in locations %}
+      {% assign split_location = location | split: '|' %}
+      <div class="location">
+        You can find us in {{ split_location | first }} on {{ split_location | last }}.
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .arrays {
+    padding: 50px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+  }
+
+  .arrays__block {
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  h2:last-child {
+    margin-bottom: 0;
+  }
+
+  .location {
+    margin-bottom: 20px;
+  }
+</style>

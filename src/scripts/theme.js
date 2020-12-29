@@ -1,6 +1,4 @@
-import * as cart from '@shopify/theme-cart';
+import lazyload from './components/lazyload';
 
-cart.getState().then(data => console.info(data));
-
-window.cart = cart;
+lazyload();
 

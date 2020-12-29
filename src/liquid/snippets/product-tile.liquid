@@ -13,8 +13,8 @@
 %}
 
 <a href="{{ product.url }}" class="product-tile{% if has_second_image %} product-tile--has-second-image{% endif %}">
-  <div class="product-tile__image-wrapper"{% if has_second_image %} style="background-image: url({{ product.images[1] | img_url: '700x' }});"{% endif %}>
-    <img class="product-tile__image" src="{{ product.featured_image | img_url: '700x' }}" alt="{{ product.featured_image.alt }}" />
+  <div class="product-tile__image-wrapper lazy"{% if has_second_image %} data-bg="{{ product.images[1] | img_url: '700x' }}"{% endif %}>
+    <img class="product-tile__image lazy" data-src="{{ product.featured_image | img_url: '700x' }}" alt="{{ product.featured_image.alt }}" />
   </div>
   <div class="product-tile__info">
     <h3 class="product-tile__title">{{ product.title }}</h3>
