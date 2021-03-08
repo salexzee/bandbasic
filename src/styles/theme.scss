@@ -7,9 +7,11 @@
 @import './components/featured-products';
 @import './components/header';
 @import './components/hero';
+@import './components/line-item';
 @import './components/nav';
 @import './components/product-tile';
 
 // Pages
+@import './pages/cart';
 @import './pages/collection';
 @import './pages/product';

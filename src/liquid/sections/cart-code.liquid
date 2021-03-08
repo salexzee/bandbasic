@@ -1,0 +1,68 @@
+<div class="cart">
+  <h1 class="cart__title">My Cart</h1>
+
+  <form class="cart__wrapper" action="/cart" method="post">
+    <div class="cart__items cart__block">
+      {% for line_item in cart.items %}
+        {% render 'line-item', line_item: line_item %}
+      {% endfor %}
+    </div>
+
+    <div class="cart__details cart__block">
+      <div class="cart__total">
+        <strong class="cart__total-text">Total:</strong>
+        <span class="cart__total-price">{{ cart.total_price | money }}</span>
+      </div>
+      <button class="button" type="submit">Update Quantities</button>
+      <button class="button" type="submit" name="checkout">Checkout</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+{% comment %}
+  Requires the following arguments:
+
+  - line_item
+{% endcomment %}
+
+<div class="line-item">
+  <div class="line-item__left">
+    <div class="line-item__image-wrapper">
+      <img
+        class="line-item__image"
+        src="{{ line_item.image | img_url: 'master' }}"
+        alt="{{ line_item.image.alt }}" />
+    </div>
+
+    <div class="line-item__details">
+      <h2 class="line-item__title">{{ line_item.product.title }}</h2>
+      {% for option in line_item.options_with_values %}
+        <div class="line-item__option-block">
+          <span class="line-item__option">{{ option.name }}:</span>
+          <span class="line-item__value">{{ option.value }}</span>
+        </div>
+      {% endfor %}
+      <div class="line-item__price">
+        {{ line_item.price | money }}
+      </div>
+      <div class="line-item__quantity">
+        <span class="line-item__quantity-text">Quantity:</span>
+        <input
+          type="text"
+          name="updates[]"
+          size="4"
+          id="updates_{{ line_item.id }}"
+          value="{{ line_item.quantity }}"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="line-item__right">
+    <a class="line-item__remove" href="/cart/change?line={{ forloop.index }}&quantity=0">Remove</a>
+  </div>
+</div>
