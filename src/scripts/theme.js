@@ -1,4 +1,9 @@
 import lazyload from './components/lazyload';
 
-lazyload();
+document.addEventListener('DOMContentLoaded', () => {
+  lazyload();
+});
 
+document.addEventListener('load', () => {
+
+});
