@@ -1,0 +1,149 @@
+{% schema %}
+  {
+    "name": "Every Setting",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Every Setting in Shopify"
+      },
+      {
+        "type": "paragraph",
+        "content": "This is every setting availabe in Shopify."
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Text",
+        "default": "This is some text",
+        "info": "Write text here"
+      },
+      {
+        "type": "textarea",
+        "id": "textarea",
+        "label": "Textarea"
+      },
+      {
+        "type": "radio",
+        "id": "radio",
+        "label": "Radio",
+        "options": [
+          {
+            "value": "option_1",
+            "label": "Option 1"
+          },
+          {
+            "value": "option_2",
+            "label": "Option 2"
+          }
+        ],
+        "default": "option_1"
+      },
+      {
+        "type": "select",
+        "id": "select",
+        "label": "Select",
+        "options": [
+          {
+            "value": "option_1",
+            "label": "Option 1"
+          },
+          {
+            "value": "option_2",
+            "label": "Option 2"
+          }
+        ],
+        "default": "option_1"
+      },
+      {
+        "type": "checkbox",
+        "id": "checkbox",
+        "label": "Checkbox",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "range",
+        "label": "Range",
+        "min": 1,
+        "max": 10,
+        "step": 1,
+        "default": 5,
+        "unit": "px"
+      },
+      {
+        "type": "number",
+        "id": "number",
+        "label": "Number",
+        "default": 5
+      },
+      {
+        "type": "color",
+        "id": "color",
+        "label": "Color",
+        "default": "#fafafa"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_picker",
+        "label": "Font Picker",
+        "default": "helvetica_n4"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+      {
+        "type": "product",
+        "id": "product",
+        "label": "Product"
+      },
+      {
+        "type": "blog",
+        "id": "blog",
+        "label": "Blog"
+      },
+      {
+        "type": "page",
+        "id": "Page",
+        "label": "Page"
+      },
+      {
+        "type": "link_list",
+        "id": "link_list",
+        "label": "Link List"
+      },
+      {
+        "type": "url",
+        "id": "url",
+        "label": "URL"
+      },
+      {
+        "type": "video_url",
+        "id": "video_url",
+        "label": "Video URL",
+        "accept": ["youtube", "vimeo"]
+      },
+      {
+        "type": "richtext",
+        "id": "richtext",
+        "label": "Rich Text"
+      },
+      {
+        "type": "html",
+        "id": "html",
+        "label": "HTML"
+      },
+      {
+        "type": "article",
+        "id": "article",
+        "label": "Article"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_picker",
+        "label": "Image Picker"
+      }
+    ]
+  }
+{% endschema %}
